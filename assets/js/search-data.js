@@ -94,6 +94,28 @@ ninja.data = [{
             window.location.href = "/blog/2024/photo-gallery/";
           
         },
+      },{id: "post-raptor-recursive-abstractive-processing-for-tree-organized-retrieval",
+        
+          title: "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+        
+        description: "Stanford&#39;s RAPTOR method builds hierarchical text structures through recursive clustering and summarization to solve semantic information loss in traditional RAG text chunking. The approach uses soft clustering, UMAP dimensionality reduction, and Bayesian Information Criterion to optimize retrieval effectiveness while preserving complete semantics.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/raptor-en/";
+          
+        },
+      },{id: "post-raptor-recursive-abstractive-processing-for-tree-organized-retrieval",
+        
+          title: "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+        
+        description: "Stanford 提出的 RAPTOR 方法透過遞迴分群和總結建立階層式文本架構，有效解決傳統 RAG 系統在文本切塊時的語意資訊流失問題。該方法使用軟分群、UMAP 降維和貝葉斯資訊準則來優化檢索效果，在保留完整語意的同時提升檢索準確性。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/raptor-chs/";
+          
+        },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
           title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
