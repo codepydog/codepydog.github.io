@@ -18,7 +18,7 @@ lang_ref: raptor-tutorial
   <a href="/blog/2024/raptor-en/" style="color: #007bff; text-decoration: none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">English</a>
 </div>
 
-> **來源：** [Paper](https://arxiv.org/abs/2401.18059) / [Official GitHub](https://github.com/parthsarthi03/raptor) 
+> **來源：** [Paper](https://arxiv.org/abs/2401.18059) / [Official GitHub](https://github.com/parthsarthi03/raptor)
 
 這是一篇來自 Stanford 的論文，全名為 **[RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](https://arxiv.org/abs/2401.18059)**。今年初剛出來時看到很多人在 Twitter 上分享，同時這篇也被 ICLR 接受，非常值得閱讀。
 

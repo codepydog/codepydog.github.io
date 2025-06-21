@@ -1,18 +1,21 @@
-{% assign posts = site.posts | where: "lang_ref", page.lang_ref %}
+{% assign posts = site.posts | where: 'lang_ref', page.lang_ref %}
 {% if posts.size > 1 %}
-<div class="language-switcher" style="text-align: right; margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #007bff;">
-  <span style="font-size: 14px; color: #666; margin-right: 8px;">🌐 Language:</span>
-  {% for post in posts %}
-    {% if post.lang == page.lang %}
-      <strong style="color: #007bff;">
-        {% if post.lang == 'zh' %}中文{% elsif post.lang == 'en' %}English{% else %}{{ post.lang }}{% endif %}
-      </strong>
-    {% else %}
-      <a href="{{ post.url | relative_url }}" style="color: #007bff; text-decoration: none;">
-        {% if post.lang == 'zh' %}中文{% elsif post.lang == 'en' %}English{% else %}{{ post.lang }}{% endif %}
-      </a>
-    {% endif %}
-    {% unless forloop.last %} | {% endunless %}
-  {% endfor %}
-</div>
+  <div
+    class="language-switcher"
+    style="text-align: right; margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #007bff;"
+  >
+    <span style="font-size: 14px; color: #666; margin-right: 8px;">🌐 Language:</span>
+    {% for post in posts %}
+      {% if post.lang == page.lang %}
+        <strong style="color: #007bff;">
+          {% if post.lang == 'zh' %}中文{% elsif post.lang == 'en' %}English{% else %}{{ post.lang }}{% endif %}
+        </strong>
+      {% else %}
+        <a href="{{ post.url | relative_url }}" style="color: #007bff; text-decoration: none;">
+          {% if post.lang == 'zh' %}中文{% elsif post.lang == 'en' %}English{% else %}{{ post.lang }}{% endif %}
+        </a>
+      {% endif %}
+      {% unless forloop.last %} | {% endunless %}
+    {% endfor %}
+  </div>
 {% endif %}

@@ -28,7 +28,7 @@ Add these fields to each post's front matter:
 layout: post
 title: "Your Title"
 # ... other fields ...
-lang: zh                    # 語言代碼 / Language code (zh, en, etc.)
+lang: zh # 語言代碼 / Language code (zh, en, etc.)
 lang_ref: article-reference # 相同的參考ID / Same reference ID for all versions
 ---
 ```
@@ -51,6 +51,7 @@ Add at the beginning of your post content:
 ## 示例 / Example
 
 ### 中文版本 / Chinese Version
+
 ```yaml
 ---
 layout: post
@@ -65,6 +66,7 @@ lang_ref: my-article
 ```
 
 ### 英文版本 / English Version
+
 ```yaml
 ---
 layout: post
@@ -89,9 +91,9 @@ The language switcher styling can be modified in `_includes/language_switcher.li
 2. 使用對應的語言代碼創建新文章
 3. 確保 `lang_ref` 在所有語言版本中保持一致
 
-1. Add new language detection in `_includes/language_switcher.liquid`
-2. Create new posts with corresponding language codes
-3. Ensure `lang_ref` remains consistent across all language versions
+4. Add new language detection in `_includes/language_switcher.liquid`
+5. Create new posts with corresponding language codes
+6. Ensure `lang_ref` remains consistent across all language versions
 
 ## 注意事項 / Notes
 
@@ -112,3 +114,4 @@ The language switcher styling can be modified in `_includes/language_switcher.li
 │   ├── 2024-09-18-raptor-rag-tutorial.md     # 中文版文章
 │   └── 2024-09-18-raptor-rag-tutorial-en.md  # 英文版文章
 └── MULTILINGUAL_GUIDE.md          # 本指南文件
+```
