@@ -1,3 +1,8 @@
+---
+layout: page
+title: "多語言博客文章指南 / Multilingual Blog Post Guide"
+---
+
 # 多語言博客文章指南 / Multilingual Blog Post Guide
 
 ## 概述 / Overview
