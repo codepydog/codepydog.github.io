@@ -28,7 +28,7 @@ This is a groundbreaking paper from Apple, officially titled **[The Illusion of 
 
 Current evaluations of large language models' reasoning capabilities primarily suffer from the following issues:
 
-> *"Current evaluations primarily focus on established mathematical and coding benchmarks, emphasizing final answer accuracy. However, these approaches fail to provide insights into the reasoning traces' structure and quality."*
+> _"Current evaluations primarily focus on established mathematical and coding benchmarks, emphasizing final answer accuracy. However, these approaches fail to provide insights into the reasoning traces' structure and quality."_
 
 **Three Core Problems:**
 
@@ -40,7 +40,7 @@ Current evaluations of large language models' reasoning capabilities primarily s
 
 The paper identifies a key trend:
 
-> *"Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities, scaling properties, and limitations remain insufficiently understood."*
+> _"Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities, scaling properties, and limitations remain insufficiently understood."_
 
 Although new-generation reasoning models (such as Claude 3.7 Thinking, GPT-o1, etc.) perform excellently on benchmarks, our understanding of their true capabilities remains insufficient.
 
@@ -50,16 +50,18 @@ Although new-generation reasoning models (such as Claude 3.7 Thinking, GPT-o1, e
 
 Apple's research team proposed a revolutionary evaluation framework:
 
-> *"In this work, we systematically investigate these aspects of LRMs by constructing puzzle environments that allow precise manipulation of computational complexity while maintaining consistent logical structures."*
+> _"In this work, we systematically investigate these aspects of LRMs by constructing puzzle environments that allow precise manipulation of computational complexity while maintaining consistent logical structures."_
 
 **Three Key Innovations:**
 
 1. **Controllable Puzzle Environment Design**
+
    - Precise control of computational complexity
    - Maintaining consistent logical structures
    - Eliminating external variable interference
 
 2. **Reasoning Trace Analysis**
+
    - Simultaneous analysis of final answers and intermediate reasoning processes
    - Complete reasoning path verification from initial state to target state
    - Multi-dimensional performance evaluation
@@ -73,7 +75,7 @@ Apple's research team proposed a revolutionary evaluation framework:
 
 The research team designed a controllable complexity puzzle environment, with the advantage being:
 
-> *"This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into LRMs' computational behavior."*
+> _"This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into LRMs' computational behavior."_
 
 By adjusting puzzle size and step count, researchers can precisely control the computational complexity of problems while maintaining consistency in logical structure.
 
@@ -83,9 +85,10 @@ By adjusting puzzle size and step count, researchers can precisely control the c
 
 The paper's most important discovery challenges a fundamental assumption in the AI field:
 
-> *"Moreover, they exhibit a counterintuitive scaling limit: their reasoning effect increases with problem complexity up to a point, then declines despite having an adequate token budget."*
+> _"Moreover, they exhibit a counterintuitive scaling limit: their reasoning effect increases with problem complexity up to a point, then declines despite having an adequate token budget."_
 
 **Key Insights:**
+
 - Reasoning effectiveness improves with problem complexity, but only up to a critical point
 - Beyond the critical point, performance still declines even with adequate token budget
 - This phenomenon reveals fundamental limitations of current reasoning models
@@ -95,10 +98,12 @@ The paper's most important discovery challenges a fundamental assumption in the 
 From the paper's experimental results, we can see three important patterns:
 
 1. **Accuracy vs Complexity Curve**:
+
    - As complexity increases, model accuracy shows an inverted U-shaped curve
    - There exists an optimal complexity point, beyond which performance drops sharply
 
 2. **Token Usage Patterns**:
+
    - Models dynamically adjust thinking length based on problem complexity
    - But beyond a certain point, increasing thinking length cannot improve performance
 
@@ -112,9 +117,10 @@ From the paper's experimental results, we can see three important patterns:
 
 The paper discovered an interesting phenomenon:
 
-> *"Both cases reveal inefficiencies in the reasoning process."*
+> _"Both cases reveal inefficiencies in the reasoning process."_
 
 **Two Types of Inefficient Patterns:**
+
 1. **Premature Convergence**: May overthink on simple problems
 2. **Error Fixation**: Easily trapped in wrong thinking on complex problems and difficult to self-correct
 
@@ -122,11 +128,11 @@ The paper discovered an interesting phenomenon:
 
 The paper poses a profound philosophical question:
 
-> *"emergence suggests a potential paradigm shift in how LLM systems approach complex reasoning and problem-solving tasks, with some researchers proposing them as significant steps toward more general artificial intelligence capabilities."*
+> _"emergence suggests a potential paradigm shift in how LLM systems approach complex reasoning and problem-solving tasks, with some researchers proposing them as significant steps toward more general artificial intelligence capabilities."_
 
 But also maintains a rational attitude:
 
-> *"Despite these claims and performance advancements, the fundamental benefits and limitations of LRMs remain insufficiently understood."*
+> _"Despite these claims and performance advancements, the fundamental benefits and limitations of LRMs remain insufficiently understood."_
 
 ## Practical Value and Future Directions
 
@@ -135,14 +141,17 @@ But also maintains a rational attitude:
 This research provides important practical guidance for AI applications:
 
 **1. Cost Optimization Strategies**
+
 - Help determine optimal reasoning resource allocation
 - Avoid wasting resources on tasks beyond the optimal complexity point
 
 **2. Performance Expectation Management**
+
 - Set reasonable performance expectations for tasks of different complexity
 - Understand the boundaries of model capabilities
 
 **3. Model Selection Guidelines**
+
 - Select appropriate reasoning models for specific applications
 - Balance performance and cost
 
@@ -151,14 +160,17 @@ This research provides important practical guidance for AI applications:
 This work opens several important research directions:
 
 **1. Adaptive Reasoning**
+
 - How to make models dynamically adjust reasoning strategies based on problem complexity
 - Develop complexity-aware reasoning algorithms
 
 **2. Reasoning Efficiency Optimization**
+
 - How to improve reasoning efficiency while maintaining accuracy
 - Design smarter computational resource allocation mechanisms
 
 **3. Evaluation Methodology Innovation**
+
 - Develop more comprehensive reasoning capability evaluation frameworks
 - Focus on process rather than just results
 
@@ -196,6 +208,7 @@ This research also reminds us to pay attention to the reliability of AI systems:
 This paper provides a completely new perspective for understanding large reasoning models. By revealing the counterintuitive phenomenon of "reasoning effectiveness complexity boundaries," it challenges our basic assumptions about AI capabilities and reminds us that when pursuing more powerful AI systems, we need to understand these systems' working principles more deeply.
 
 **Core Insights:**
+
 - More computational resources don't always lead to better performance
 - Reasoning models have fundamental capability boundaries
 - We need to rethink how to evaluate and optimize reasoning capabilities

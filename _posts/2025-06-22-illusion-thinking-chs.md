@@ -28,19 +28,19 @@ lang_ref: illusion-thinking-tutorial
 
 當前對大型語言模型推理能力的評估主要存在以下問題：
 
-> *"Current evaluations primarily focus on established mathematical and coding benchmarks, emphasizing final answer accuracy. However, these approaches fail to provide insights into the reasoning traces' structure and quality."*
+> _"Current evaluations primarily focus on established mathematical and coding benchmarks, emphasizing final answer accuracy. However, these approaches fail to provide insights into the reasoning traces' structure and quality."_
 
 **三大核心問題：**
 
 1. **過度關注最終答案準確性**：現有評估主要看結果是否正確，而忽略了推理過程的品質
-2. **缺乏對推理結構的深入分析**：沒有系統性地分析模型的內部推理軌跡  
+2. **缺乏對推理結構的深入分析**：沒有系統性地分析模型的內部推理軌跡
 3. **對問題複雜度的理解不足**：缺乏從問題複雜度角度來理解模型性能的框架
 
 ### 大型推理模型的興起與挑戰
 
 論文指出了一個關鍵趨勢：
 
-> *"Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities, scaling properties, and limitations remain insufficiently understood."*
+> _"Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities, scaling properties, and limitations remain insufficiently understood."_
 
 雖然新一代的推理模型（如 Claude 3.7 Thinking、GPT-o1 等）在benchmark上表現優異，但我們對其真實能力的理解仍然不足。
 
@@ -50,30 +50,32 @@ lang_ref: illusion-thinking-tutorial
 
 Apple 研究團隊提出了一個革命性的評估框架：
 
-> *"In this work, we systematically investigate these aspects of LRMs by constructing puzzle environments that allow precise manipulation of computational complexity while maintaining consistent logical structures."*
+> _"In this work, we systematically investigate these aspects of LRMs by constructing puzzle environments that allow precise manipulation of computational complexity while maintaining consistent logical structures."_
 
 **三個關鍵創新：**
 
 1. **可控制的拼圖環境設計**
+
    - 精確控制計算複雜度
    - 保持一致的邏輯結構
    - 消除外部變數干擾
 
 2. **推理軌跡分析**
+
    - 同時分析最終答案和中間推理過程
    - 從初始狀態到目標狀態的完整推理路徑驗證
    - 多維度性能評估
 
 3. **三個關鍵性能指標**
    - **最終答案準確性**
-   - **推理軌跡品質**  
+   - **推理軌跡品質**
    - **計算效率**
 
 ### 實驗設計的巧思
 
 研究團隊設計了一個可控制複雜度的拼圖環境，這種設計的優勢在於：
 
-> *"This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into LRMs' computational behavior."*
+> _"This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into LRMs' computational behavior."_
 
 通過調整拼圖的大小和步驟數，研究者可以精確控制問題的計算複雜度，同時保持邏輯結構的一致性。
 
@@ -83,9 +85,10 @@ Apple 研究團隊提出了一個革命性的評估框架：
 
 論文最重要的發現挑戰了AI領域的一個基本假設：
 
-> *"Moreover, they exhibit a counterintuitive scaling limit: their reasoning effect increases with problem complexity up to a point, then declines despite having an adequate token budget."*
+> _"Moreover, they exhibit a counterintuitive scaling limit: their reasoning effect increases with problem complexity up to a point, then declines despite having an adequate token budget."_
 
 **關鍵洞察：**
+
 - 推理效果隨問題複雜度增加而提升，但只到某個臨界點
 - 超過臨界點後，即使有充足的token預算，性能仍會下降
 - 這種現象揭示了當前推理模型的根本限制
@@ -95,10 +98,12 @@ Apple 研究團隊提出了一個革命性的評估框架：
 從論文的實驗結果可以看到三個重要模式：
 
 1. **準確性vs複雜度曲線**：
+
    - 隨著複雜度增加，模型準確性呈現倒U型曲線
    - 存在一個最佳複雜度點，超過後性能急劇下降
 
 2. **Token使用模式**：
+
    - 模型會根據問題複雜度動態調整思考長度
    - 但在某個點後，增加思考長度無法提升性能
 
@@ -112,9 +117,10 @@ Apple 研究團隊提出了一個革命性的評估框架：
 
 論文發現了一個有趣的現象：
 
-> *"Both cases reveal inefficiencies in the reasoning process."*
+> _"Both cases reveal inefficiencies in the reasoning process."_
 
 **兩種低效模式：**
+
 1. **過早收斂**：在簡單問題上可能過度思考
 2. **錯誤固化**：在複雜問題上容易陷入錯誤思路並難以自我糾正
 
@@ -122,11 +128,11 @@ Apple 研究團隊提出了一個革命性的評估框架：
 
 論文提出了一個深刻的哲學問題：
 
-> *"emergence suggests a potential paradigm shift in how LLM systems approach complex reasoning and problem-solving tasks, with some researchers proposing them as significant steps toward more general artificial intelligence capabilities."*
+> _"emergence suggests a potential paradigm shift in how LLM systems approach complex reasoning and problem-solving tasks, with some researchers proposing them as significant steps toward more general artificial intelligence capabilities."_
 
 但同時也保持了理性的態度：
 
-> *"Despite these claims and performance advancements, the fundamental benefits and limitations of LRMs remain insufficiently understood."*
+> _"Despite these claims and performance advancements, the fundamental benefits and limitations of LRMs remain insufficiently understood."_
 
 ## 實用價值與未來方向
 
@@ -135,14 +141,17 @@ Apple 研究團隊提出了一個革命性的評估框架：
 這項研究為AI應用提供了重要的實用指導：
 
 **1. 成本優化策略**
+
 - 幫助確定最佳的推理資源配置
 - 避免在超過最佳複雜度點的任務上浪費資源
 
 **2. 性能預期管理**
+
 - 為不同複雜度的任務設定合理的性能預期
 - 理解模型能力的邊界
 
 **3. 模型選擇指南**
+
 - 為特定應用選擇合適的推理模型
 - 平衡性能與成本
 
@@ -151,14 +160,17 @@ Apple 研究團隊提出了一個革命性的評估框架：
 這項工作開啟了幾個重要的研究方向：
 
 **1. 適應性推理**
+
 - 如何讓模型根據問題複雜度動態調整推理策略
 - 開發複雜度感知的推理算法
 
 **2. 推理效率優化**
+
 - 如何在保持準確性的同時提高推理效率
 - 設計更智能的計算資源分配機制
 
 **3. 評估方法學創新**
+
 - 發展更全面的推理能力評估框架
 - 關注過程而非僅僅關注結果
 
@@ -196,6 +208,7 @@ Apple 研究團隊提出了一個革命性的評估框架：
 這篇論文為我們理解大型推理模型提供了全新的視角。通過揭示「推理效果的複雜度邊界」這一反直覺現象，它挑戰了我們對AI能力的基本假設，提醒我們在追求更強大的AI系統時，需要更深入地理解這些系統的工作原理。
 
 **核心啟示：**
+
 - 更多計算資源並不總是帶來更好的性能
 - 推理模型存在根本性的能力邊界
 - 我們需要重新思考如何評估和優化推理能力
