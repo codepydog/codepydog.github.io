@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval"
+title: "[中文版] RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval"
 date: 2024-09-18 10:00:00
 description: Stanford 提出的 RAPTOR 方法透過遞迴分群和總結建立階層式文本架構，有效解決傳統 RAG 系統在文本切塊時的語意資訊流失問題。該方法使用軟分群、UMAP 降維和貝葉斯資訊準則來優化檢索效果，在保留完整語意的同時提升檢索準確性。
 tags: rag retrieval clustering
