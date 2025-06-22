@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Illusion of the Illusion of Thinking: When AI Evaluation Methods Become Traps for Capability Assessment"
-date: 2025-06-22 01:00:00
+date: 2025-06-16 00:00:00
 description: "This commentary paper reveals a shocking truth: we often mistake the limitations of AI evaluation methods for the limitations of AI systems themselves! Research shows that many cases considered AI reasoning failures are actually misjudgments caused by poorly designed evaluation frameworks."
 tags: ai-evaluation reasoning model-limitations methodology
 categories: paper english

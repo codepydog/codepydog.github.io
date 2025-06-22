@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
-date: 2025-06-22 00:00:00
+date: 2025-06-07 00:00:00
 description: "This Apple paper reveals a shocking truth: reasoning models aren't always better with more complexity! Research shows that when problems exceed a certain complexity threshold, performance actually declines even with more thinking time. This challenges our basic understanding of AI reasoning capabilities."
 tags: reasoning llm evaluation
 categories: paper english

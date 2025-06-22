@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[中文版] The Illusion of the Illusion of Thinking: 當AI評估方法成為能力判斷的陷阱"
-date: 2025-06-22 01:00:00
+date: 2025-06-16 00:00:00
 description: 這篇評論文章揭露了一個驚人真相：我們經常將AI評估方法的限制誤認為是AI系統能力的限制！研究發現，許多被認為是AI推理失敗的案例，實際上是評估框架設計不當造成的誤判。
 tags: ai-evaluation reasoning model-limitations methodology
 categories: paper chinese

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[中文版] The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
-date: 2025-06-22 00:00:00
+date: 2025-06-07 00:00:00
 description: 這篇Apple論文發現了一個驚人事實：推理模型並非越複雜越好！研究顯示當問題超過某個複雜度後，即使給模型更多時間思考，表現反而會下降。這挑戰了我們對AI推理能力的基本認知。
 tags: reasoning llm evaluation
 categories: paper chinese
