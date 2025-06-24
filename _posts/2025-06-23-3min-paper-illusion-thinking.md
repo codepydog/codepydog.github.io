@@ -9,13 +9,15 @@ related_posts: true
 ---
 
 > **⏱️ 閱讀時間：3分鐘**  
-> **📄 相關論文：**  
-> - [Apple原論文: The Illusion of Thinking](https://arxiv.org/pdf/2506.06941)  
+> **📄 相關論文：**
+>
+> - [Apple原論文: The Illusion of Thinking](https://arxiv.org/pdf/2506.06941)
 > - [反駁論文: The Illusion of the Illusion of Thinking](https://arxiv.org/pdf/2506.09250)
 
 ## 前情提要
 
 這個故事要從兩篇文章說起：
+
 - [Apple原論文詳細分析 - 中文版](/blog/2025/illusion-thinking-chs/)
 - [Apple原論文詳細分析 - 英文版](/blog/2025/illusion-thinking-en/)
 - [反駁論文分析 - 中文版](/blog/2025/illusion-illusion-thinking-chs/)
@@ -48,8 +50,9 @@ Apple的實驗設計非常精巧，解決了傳統AI評估的幾個關鍵問題�
 **河內塔問題**：這是一個經典的遞歸問題。你有三根柱子，一根柱子上有N個大小不同的盤子，大的在下小的在上。目標是把所有盤子移到另一根柱子上，規則是一次只能移一個盤子，且大盤子不能放在小盤子上面。
 
 數學上，N個盤子需要2^N - 1步才能完成。這意味著：
+
 - 3個盤子：7步
-- 5個盤子：31步  
+- 5個盤子：31步
 - 10個盤子：1,023步
 - 15個盤子：32,767步
 
@@ -108,6 +111,7 @@ Apple的結論很明確：當前的大型推理模型存在根本性的架構限
 Lawson首先提出了一個重要的概念區分：**工程決策 vs 推理失敗**。
 
 他認為，當AI選擇停止輸出時，這可能是基於以下合理考量：
+
 - **效率優化**：避免產生冗長無用的輸出
 - **資源管理**：合理分配計算資源
 - **用戶體驗**：提供簡潔有用的回答
@@ -124,6 +128,7 @@ Lawson找到了最關鍵的證據。Twitter用戶@scaling01重做了Apple的實�
 > （模式會繼續下去，但為了避免太長，我在這裡停止）
 
 這句話包含了幾個重要信息：
+
 1. **模式理解**：AI知道解決方案的模式
 2. **自我監控**：AI意識到輸出長度的問題
 3. **主動決策**：AI選擇在合適的地方停止
@@ -135,16 +140,19 @@ Lawson找到了最關鍵的證據。Twitter用戶@scaling01重做了Apple的實�
 Lawson做了嚴格的數學分析，計算了河內塔問題的真實token需求：
 
 **線性輸出模式**（只輸出最終移動序列）：
+
 ```
 T_final(N) ≈ 10(2^N - 1) + C
 ```
 
 **理論最大可解規模**：
+
 ```
 N_max ≈ log₂(L_max/10)
 ```
 
 具體數字：
+
 - 對於64,000 tokens：理論上可以解到N=12-13
 - 對於100,000 tokens：理論上可以解到N=13
 - 對於128,000 tokens：理論上可以解到N=13-14
@@ -162,6 +170,7 @@ N_max ≈ log₂(L_max/10)
 Lawson指出，這就像是拿「證明1+1=3」去測試數學家的能力，然後因為數學家證明不出來就說他們沒有推理能力。
 
 **Apple的邏輯謬誤**：
+
 1. 設計了無解的問題
 2. 測試AI能否解決
 3. AI解不出來
@@ -176,17 +185,20 @@ Lawson不只是理論分析，還做了實際實驗來證明自己的觀點：
 **實驗設計**：改變輸出格式，測試AI是否真的無法解決複雜問題。
 
 **測試提示**：
+
 ```
 "Solve Tower of Hanoi with 15 disks. Output a Lua function that prints the solution when called."
 ```
 
 **實驗結果**：
+
 - Claude-3.7-Sonnet：完美解決
-- Claude Opus 4：完美解決  
+- Claude Opus 4：完美解決
 - OpenAI o3：完美解決
 - Google Gemini 2.5：完美解決
 
 **關鍵數據**：
+
 - 所有模型都在5,000個tokens內完成
 - 生成的Lua函數正確實現了遞歸算法
 - 執行結果完全正確
@@ -198,7 +210,7 @@ Lawson不只是理論分析，還做了實際實驗來證明自己的觀點：
 Lawson還質疑了Apple使用的複雜度指標。Apple用「組合深度」（最小移動數）來衡量複雜度，但這忽略了一個重要事實：
 
 | 問題類型 | 解決方案長度 | 每步決策複雜度 | 真實計算複雜度 |
-|----------|--------------|----------------|----------------|
+| -------- | ------------ | -------------- | -------------- |
 | 河內塔   | 2^N - 1      | O(1)           | 微不足道       |
 | 積木世界 | O(N)         | O(N²)          | NP-hard        |
 
@@ -209,6 +221,7 @@ Lawson還質疑了Apple使用的複雜度指標。Apple用「組合深度」（�
 Lawson的反駁揭示了AI評估中的一個根本問題：**我們經常將評估方法的限制誤認為是AI系統能力的限制**。
 
 **具體表現**：
+
 1. **格式約束**：要求AI輸出特定格式，然後因為格式問題判定失敗
 2. **長度偏見**：認為輸出越長越好，忽略了簡潔性的價值
 3. **過程迷信**：過度關注中間步驟，忽略了最終結果的正確性
@@ -219,6 +232,7 @@ Lawson的反駁揭示了AI評估中的一個根本問題：**我們經常將評�
 Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自我認知能力**：
 
 **表現形式**：
+
 - **長度感知**：知道自己的輸出會有多長
 - **效率考量**：會權衡輸出的成本和收益
 - **用戶導向**：考慮輸出對用戶的實用性
@@ -231,14 +245,17 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 雖然Lawson的反駁很有力，但也不是完美無缺：
 
 **可能的過度解讀**：
+
 - 將AI的統計行為解讀為「意識」可能過於樂觀
 - AI的「自我認知」可能只是訓練數據中的模式反映
 
 **未完全否定的問題**：
+
 - AI確實可能存在某些能力邊界
 - 不同類型的推理問題可能有不同的限制
 
 **方法論的改進空間**：
+
 - 需要更多不同類型的實驗來驗證觀點
 - 評估框架仍需要進一步完善
 
@@ -259,6 +276,7 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **代表性觀點**：
 
 一位自稱是認知科學博士的用戶寫道：
+
 > "LLMs are sophisticated pattern matching machines, nothing more. They can't reason about novel situations that weren't in their training data. The Apple paper just confirms what we've known all along."
 
 **主要論點**：
@@ -272,6 +290,7 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **測試環境太簡化**：拼圖遊戲雖然看起來複雜，但實際上是高度結構化的封閉環境，無法測試真正的推理能力。
 
 **有趣的類比**：有人用了一個很生動的比喻：
+
 > "It's like a person who memorized every chess game ever played. They might look like a chess master, but they're just pattern matching. Put them in a novel position, and they'll crumble."
 
 ### 挺反駁派：「評估方法論」
@@ -281,6 +300,7 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **代表性觀點**：
 
 一位自稱在大型科技公司工作的ML engineer說：
+
 > "The evaluation methodology is fundamentally flawed. We're measuring the wrong things and then drawing conclusions about capabilities. It's like testing a race car's speed by making it drive through a maze."
 
 **主要論點**：
@@ -290,11 +310,13 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **工程vs學術的視角差異**：學術界關注理論上的完美，但工程界更關注實用性。AI選擇簡潔的輸出是好事，不應該被當作失敗。
 
 **測試無解問題的荒謬性**：有人做了一個很好的類比：
+
 > "This is like giving students an exam with impossible questions, then concluding they can't do math when they can't solve them."
 
 **動態評估的必要性**：傳統的靜態評估無法捕捉AI的適應性和決策能力。需要更動態、更互動的評估方法。
 
 **實用主義觀點**：一位工程師寫道：
+
 > "I don't care if my AI is 'truly reasoning' or just doing sophisticated pattern matching. If it solves my problems efficiently and reliably, that's what matters."
 
 ### 哲學派：「意識與推理的本質」
@@ -304,6 +326,7 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **代表性觀點**：
 
 一位哲學博士生寫了一個很長的回覆：
+
 > "The real question isn't whether AI can reason, but what we mean by 'reasoning' in the first place. Are we applying human-centric definitions to non-human systems?"
 
 **主要論點**：
@@ -317,6 +340,7 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 **圖靈測試的現代版本**：有人提出，我們需要一個「推理版的圖靈測試」來判斷AI是否真的在推理。
 
 **有趣的思想實驗**：有人提出了一個思想實驗：
+
 > "If an AI can solve problems that humans can't, using methods humans don't understand, is it reasoning at a higher level than humans, or is it just doing very sophisticated non-reasoning?"
 
 ### 跨派別的共識
@@ -366,11 +390,13 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 ### Apple的貢獻和問題
 
 **貢獻**：
+
 - 發現了AI系統的複雜度邊界，這很重要
 - 提出了評估推理過程而非僅看結果的方法
 - 挑戰了「暴力美學」的思維
 
 **問題**：
+
 - 測試設計確實有缺陷，包含了無解問題
 - 沒有區分工程決策和推理失敗
 - 對AI的自我認知能力理解不足
@@ -378,11 +404,13 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 ### 反駁者的洞察和局限
 
 **洞察**：
+
 - 指出了評估方法的根本問題
 - 證明了AI具有某種自我認知能力
 - 強調了測試設計的重要性
 
 **局限**：
+
 - 可能過度解讀了AI的「意識」
 - 沒有完全否定AI確實存在能力邊界
 - 對推理本質的討論還不夠深入
@@ -392,18 +420,22 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 我認為推理能力不是有或沒有的二元問題，而是一個多層次的連續光譜：
 
 **第一層：模式識別**
+
 - 基於統計學習的模式匹配
 - 大部分LLM都能做到
 
 **第二層：邏輯推導**
+
 - 基於規則的推理
 - 部分先進模型能做到
 
 **第三層：創造性推理**
+
 - 結合直覺、邏輯和創造力
 - 目前AI還很難做到
 
 **第四層：元認知推理**
+
 - 對自己推理過程的認知和調節
 - 這是最高層次的推理
 
@@ -441,16 +473,19 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 這場爭論開啟了幾個重要的研究方向：
 
 ### 技術層面
+
 - 開發複雜度感知的AI系統
 - 建立更好的自我監控機制
 - 設計適應性推理算法
 
 ### 方法論層面
+
 - 建立更科學的評估標準
 - 區分不同層次的推理能力
 - 開發多維度的評估指標
 
 ### 哲學層面
+
 - 深入探討推理的本質
 - 研究意識與推理的關係
 - 思考人機協作的可能性
@@ -460,12 +495,14 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 這場關於AI推理能力的學術大戰，最終告訴我們幾個重要道理：
 
 **核心洞察**：
+
 - AI推理能力確實存在邊界，但不一定是我們想的那樣
 - 評估方法的設計會直接影響我們對AI能力的判斷
 - 推理是多層次的，不是簡單的有無問題
 - AI系統展現出某種自我認知能力，值得重視
 
 **實用價值**：
+
 - 指導更科學的AI系統設計和部署
 - 推動評估方法學的創新
 - 促進對AI能力邊界的理性認知
@@ -479,15 +516,19 @@ Lawson的發現最重要的貢獻是揭示了AI可能具有某種形式的**自�
 ## References
 
 **原始論文**
+
 - [The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity](https://arxiv.org/pdf/2506.06941)
 
 **反駁論文**
+
 - [The Illusion of the Illusion of Thinking: A Comment on Shojaee et al. (2025)](https://arxiv.org/pdf/2506.09250)
 
 **Reddit討論**
+
 - [The Illusion of "The Illusion of Thinking" - r/datascience](https://www.reddit.com/r/datascience/comments/1ld06j0/the_illusion_of_the_illusion_of_thinking/)
 
 **相關筆記**
+
 - [Apple原論文詳細分析 - 中文版](/blog/2025/illusion-thinking-chs/)
 - [Apple原論文詳細分析 - 英文版](/blog/2025/illusion-thinking-en/)
 - [反駁論文分析 - 中文版](/blog/2025/illusion-illusion-thinking-chs/)
