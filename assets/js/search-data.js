@@ -105,6 +105,28 @@ ninja.data = [{
             window.location.href = "/blog/2025/illusion-illusion-thinking-chs/";
           
         },
+      },{id: "post-persona-features-control-emergent-misalignment",
+        
+          title: "Persona Features Control Emergent Misalignment",
+        
+        description: "OpenAI research team explores how language models generalize behaviors from training to broader deployment distributions, focusing on emergent misalignment issues. The study reveals that controlling persona features can effectively manage model misalignment behaviors, providing important insights for AI safety.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/emergent-misalignment-en/";
+          
+        },
+      },{id: "post-中文版-persona-features-control-emergent-misalignment",
+        
+          title: "[中文版] Persona Features Control Emergent Misalignment",
+        
+        description: "OpenAI 研究團隊探討語言模型在從訓練分佈泛化到更廣泛部署分佈時的行為變化，特別關注新興錯位對齊問題。研究發現透過控制人格特徵可以有效管理模型的錯位對齊行為，為AI安全提供重要見解。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/emergent-misalignment-chs/";
+          
+        },
       },{id: "post-the-illusion-of-thinking-understanding-the-strengths-and-limitations-of-reasoning-models-via-the-lens-of-problem-complexity",
         
           title: "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via...",
