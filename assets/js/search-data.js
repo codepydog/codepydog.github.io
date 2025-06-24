@@ -72,7 +72,62 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-3min-paper-the-illusion-of-thinking",
+        
+          title: "[3min-Paper] The_Illusion_of_Thinking",
+        
+        description: "AI真的會推理嗎？還是我們的測試方法有問題？",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/3min-paper-illusion-thinking/";
+          
+        },
+      },{id: "post-the-illusion-of-the-illusion-of-thinking-when-ai-evaluation-methods-become-traps-for-capability-assessment",
+        
+          title: "The Illusion of the Illusion of Thinking: When AI Evaluation Methods Become Traps...",
+        
+        description: "This commentary paper reveals a shocking truth: we often mistake the limitations of AI evaluation methods for the limitations of AI systems themselves! Research shows that many cases considered AI reasoning failures are actually misjudgments caused by poorly designed evaluation frameworks.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/illusion-illusion-thinking-en/";
+          
+        },
+      },{id: "post-中文版-the-illusion-of-the-illusion-of-thinking-當ai評估方法成為能力判斷的陷阱",
+        
+          title: "[中文版] The Illusion of the Illusion of Thinking: 當AI評估方法成為能力判斷的陷阱",
+        
+        description: "這篇評論文章揭露了一個驚人真相：我們經常將AI評估方法的限制誤認為是AI系統能力的限制！研究發現，許多被認為是AI推理失敗的案例，實際上是評估框架設計不當造成的誤判。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/illusion-illusion-thinking-chs/";
+          
+        },
+      },{id: "post-the-illusion-of-thinking-understanding-the-strengths-and-limitations-of-reasoning-models-via-the-lens-of-problem-complexity",
+        
+          title: "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via...",
+        
+        description: "This Apple paper reveals a shocking truth: reasoning models aren&#39;t always better with more complexity! Research shows that when problems exceed a certain complexity threshold, performance actually declines even with more thinking time. This challenges our basic understanding of AI reasoning capabilities.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/illusion-thinking-en/";
+          
+        },
+      },{id: "post-中文版-the-illusion-of-thinking-understanding-the-strengths-and-limitations-of-reasoning-models-via-the-lens-of-problem-complexity",
+        
+          title: "[中文版] The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models...",
+        
+        description: "這篇Apple論文發現了一個驚人事實：推理模型並非越複雜越好！研究顯示當問題超過某個複雜度後，即使給模型更多時間思考，表現反而會下降。這挑戰了我們對AI推理能力的基本認知。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/illusion-thinking-chs/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
@@ -105,9 +160,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/raptor-en/";
           
         },
-      },{id: "post-raptor-recursive-abstractive-processing-for-tree-organized-retrieval",
+      },{id: "post-中文版-raptor-recursive-abstractive-processing-for-tree-organized-retrieval",
         
-          title: "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+          title: "[中文版] RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
         
         description: "Stanford 提出的 RAPTOR 方法透過遞迴分群和總結建立階層式文本架構，有效解決傳統 RAG 系統在文本切塊時的語意資訊流失問題。該方法使用軟分群、UMAP 降維和貝葉斯資訊準則來優化檢索效果，在保留完整語意的同時提升檢索準確性。",
         section: "Posts",
